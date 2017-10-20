@@ -37,13 +37,18 @@ class NewsFeed extends Component {
 
     handleOnAddData(e) {
         e.preventDefault();
+        const { user, profile_picture, message } = e.target
+
         this.setState({
             data: this.state.data.concat({
-                user: e.target.user.value,
-                profile_picture: e.target.profile_picture.value,
-                message: e.target.message.value
+                user: user.value,
+                profile_picture: profile_picture.value,
+                message: message.value
             })
         })
+        
+        // Resets form input values after submit
+        user.value = profile_picture.value = message.value = '';
     }
 
     render() {
