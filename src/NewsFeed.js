@@ -77,14 +77,18 @@ class NewsFeed extends Component {
         e.preventDefault();
         const { user, profile_picture, message } = e.target
 
-        this.setState({
-            data: this.state.data.concat({
-                user: user.value,
-                profile_picture: profile_picture.value,
-                message: message.value
+        if (user.value && profile_picture.value && message.value ) {
+            this.setState({
+                data: this.state.data.concat({
+                    user: user.value,
+                    profile_picture: profile_picture.value,
+                    message: message.value
+                })
             })
-        })
-        
+        } else {
+            alert('Faltan datos por agregar')
+        }
+
         // Resets form input values after submit
         user.value = profile_picture.value = message.value = '';
     }
