@@ -1,5 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-weight: light;
+  color: #7a7a7a;
+}
+
+.NewsFeed {
+  
+}
+
+.NewsFeed ul {
+  margin: 0;
+  padding: 0;
+}
+
+.NewsFeed ul li {
+  list-style: none;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 313px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card h2,
+.card > p {
+  text-align: center;
+}
+
+.card h2 {
+  font: 700 3rem 'Merriweather', serif;
+  margin: 2rem 0 0;
+  color: #404040;
+}
+
+.card > p {
+  margin: 0 0 2rem;
+}
+
+.card ul {
+
+}
+
+.card ul li {
+
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+}
+
+.message {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  padding: .5rem;
+}
+
+.message img {
+  max-width: 70px;
+  float: left;
+  margin-right: .5rem;
+  border-radius: 3px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message h3 {
+  color: #404040;
+  font: 500 1.5rem/1em 'Merriweather', serif;
+  margin: .5rem 0;
+}
+
+.message .text {
+  color: gray;
+}
+
+form.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+form.main input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+form.main button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form.main button[type=submit]:hover {
+  background-color: #45a049;
 }

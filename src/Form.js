@@ -6,11 +6,11 @@ class Form extends Component {
         const onAddData = this.props.onAddData
 
         return(
-            <form onSubmit={onAddData}>
-                <input name='user' placeholder="Nombre" />
-                <input name='profile_picture' placeholder="Foto de Perfil" />
-                <input name='message' placeholder="Mensaje" />
-                <button>Enviar</button>
+            <form onSubmit={onAddData} className='main'>
+                <input type='text' name='user' placeholder="Nombre" />
+                <input type='text' name='profile_picture' placeholder="Foto de Perfil" />
+                <input type='text' name='message' placeholder="Mensaje" />
+                <button type='submit'>Guardar</button>
             </form>
         )
     }

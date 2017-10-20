@@ -6,10 +6,10 @@ class Message extends Component {
         const { answer, num } = this.props
 
         return(
-            <li key={num}>
+            <li key={num} className='message clearfix'>
                 <img src={answer.profile_picture} alt={answer.user} />
-                <p>{answer.user}</p>
-                <p>{answer.message}</p>
+                <h3>{answer.user}</h3>
+                <p className='text'>{answer.message}</p>
             </li>
         )
     }
