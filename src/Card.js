@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import Message from './Message';
+import React, { Component } from 'react'
+import Message from './Message'
 
 class Card extends Component {
 
     render() {
+        const { user, profile_picture, name, message, answers } = this.props.data
+        
         return(
             <div className='card'>
-                <p className='name'>{this.props.data.user}</p>
-                <img src={this.props.data.profile_picture} alt={this.props.data.name}/>
-                <p>{this.props.data.message}</p>
-                { this.props.data.answers ? <ul>{this.props.data.answers.map( (answer, num) => { return <Message answer={answer} num={num} /> } )}</ul> : null }
+                <p className='name'>{ user }</p>
+                <img src={profile_picture} alt={name}/>
+                <p>{message}</p>
+                { answers ? <ul>{answers.map( (answer, i) => { return <Message answer={answer} num={i} /> } )}</ul> : null }
             </div>
         )
     }
 }
 
-export default Card;
+export default Card

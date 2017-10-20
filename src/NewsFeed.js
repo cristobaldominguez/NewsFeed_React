@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Form from './Form';
-import Cards from './Cards';
+import React, { Component } from 'react'
+import Form from './Form'
+import Cards from './Cards'
 
 class NewsFeed extends Component {
 
@@ -35,27 +35,25 @@ class NewsFeed extends Component {
         }]
     }
 
-    handleOnAddData (e) {
+    handleOnAddData(e) {
         e.preventDefault();
-        let user = {
-            user: e.target.user.value,
-            profile_picture: e.target.profile_picture.value,
-            message: e.target.message.value
-        }
-
         this.setState({
-            data: this.state.data.concat([user])
+            data: this.state.data.concat({
+                user: e.target.user.value,
+                profile_picture: e.target.profile_picture.value,
+                message: e.target.message.value
+            })
         })
     }
 
     render() {
         return (
             <div className="App">
-                <Form onAddData={this.handleOnAddData.bind(this)} />
                 <Cards data={this.state.data} />
+                <Form onAddData={this.handleOnAddData.bind(this)} />
             </div>
         );
     }
 }
 
-export default NewsFeed;
+export default NewsFeed

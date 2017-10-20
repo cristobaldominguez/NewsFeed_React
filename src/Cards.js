@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Card from './Card';
+import React, { Component } from 'react'
+import Card from './Card'
 
 class Cards extends Component {
 
@@ -10,4 +10,4 @@ class Cards extends Component {
     }
 }
 
-export default Cards;
+export default Cards
