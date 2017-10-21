@@ -5,7 +5,30 @@ import Cards from './Cards'
 class NewsFeed extends Component {
 
     state = {
-        data: [{
+        data: [
+        {
+            user: 'Bruce Wayne',
+            profile_picture: './assets/images/highlight/Bruce Wayne.jpg',
+            message: 'I\'m a kickass motherfucker!',
+            answers: [{
+                user: 'Diana Prince',
+                profile_picture: './assets/images/profile/Diana Prince.jpg',
+                message: 'Llamada Lorem Ipsum, decidió aventurarse y salir al vasto mundo'
+            }, {
+                user: 'Frank Castle',
+                profile_picture: './assets/images/profile/Frank Castle.jpg',
+                message: 'A los textos simulados; una vida, se puede decir, poco ortográfica'
+            }, {
+                user: 'Scott Lang',
+                profile_picture: './assets/images/profile/Scott Lang.jpg',
+                message: 'Pero un buen día, una pequeña línea de texto simulado'                
+            }, {
+                
+                user: 'Hal Jordan',
+                profile_picture: './assets/images/profile/Hal Jordan.jpg',
+                message: 'Ni siquiera los todopoderosos signos de puntuación dominan'               
+            }]
+        },{
             user: 'Clark Kent',
             profile_picture: './assets/images/highlight/Clark Kent.jpg',
             message: 'Sin mi el mundo se caería a pedazos',
@@ -26,8 +49,7 @@ class NewsFeed extends Component {
                 profile_picture: './assets/images/profile/Bruce Wayne.jpg',
                 message: 'Viven aislados en casas de letras, en la costa de la semántica'                
             }]
-        },
-        {
+        },{
             user: 'Diana Prince',
             profile_picture: './assets/images/highlight/Diana Prince.jpg',
             message: 'Debo pelear para acabar con todas las guerras',
@@ -48,8 +70,7 @@ class NewsFeed extends Component {
                 profile_picture: './assets/images/profile/Frank Castle.jpg',
                 message: 'Hablamos de un país paraisomático en el que a uno le caen pedazos'                
             }]
-        },
-        {
+        },{
             user: 'Barry Allen',
             profile_picture: './assets/images/highlight/Barry Allen.jpg',
             message: 'Soy terrible de rápido',
@@ -69,6 +90,28 @@ class NewsFeed extends Component {
                 user: 'Peter Parker',
                 profile_picture: './assets/images/profile/Peter Parker.jpg',
                 message: 'Llamada Lorem Ipsum, decidió aventurarse y salir al vasto mundo'                
+            }]
+        },{
+            user: 'Natasha Romanoff',
+            profile_picture: './assets/images/highlight/Natasha Romanoff.jpg',
+            message: 'I\'m a kickass motherfucker!',
+            answers: [{
+                user: 'Peter Parker',
+                profile_picture: './assets/images/profile/Peter Parker.jpg',
+                message: 'Llamada Lorem Ipsum, decidió aventurarse y salir al vasto mundo'
+            }, {
+                user: 'Bruce Wayne',
+                profile_picture: './assets/images/profile/Bruce Wayne.jpg',
+                message: 'A los textos simulados; una vida, se puede decir, poco ortográfica'
+            }, {
+                user: 'Ororo Munroe',
+                profile_picture: './assets/images/profile/Ororo Munroe.jpg',
+                message: 'Pero un buen día, una pequeña línea de texto simulado'                
+            }, {
+                
+                user: 'Hal Jordan',
+                profile_picture: './assets/images/profile/Hal Jordan.jpg',
+                message: 'Ni siquiera los todopoderosos signos de puntuación dominan'               
             }]
         }]
     }
@@ -97,7 +140,7 @@ class NewsFeed extends Component {
         return (
             <div className="NewsFeed">
                 <Cards data={this.state.data} />
-                <Form onAddData={this.handleOnAddData.bind(this)} />
+                <Form onAddData={this.handleOnAddData} />
             </div>
         );
     }
