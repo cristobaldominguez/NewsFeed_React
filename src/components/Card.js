@@ -12,7 +12,7 @@ class Card extends Component {
                 <img src={profile_picture} alt={name}/>
                 <h2 className='name'>{ user }</h2>
                 <p>{message}</p>
-                { answers ? <ul className='messages' >{answers.map( (answer, index) => { return <Message answer={answer} index={index} /> } )}</ul> : null }
+                { answers ? <ul className='messages' >{answers.map( (answer, index) => { return <Message answer={answer} key={index} /> } )}</ul> : null }
             </li>
         )
     }

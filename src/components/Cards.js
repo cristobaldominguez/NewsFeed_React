@@ -5,7 +5,7 @@ class Cards extends Component {
     
     render() {
         return(
-            <ul className='cards'>{ this.props.data.map( (data, i) => <Card data={data} k={i} /> )}</ul>
+            <ul className='cards'>{ this.props.data.map( (data, i) => <Card data={data} key={i} /> )}</ul>
         );
     }
 }
