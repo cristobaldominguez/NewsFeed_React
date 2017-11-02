@@ -140,7 +140,7 @@ class NewsFeed extends Component {
         return (
             <div className="NewsFeed">
                 <Cards data={this.state.data} />
-                <Form onAddData={this.handleOnAddData} />
+                <Form onAddData={this.handleOnAddData.bind(this)} />
             </div>
         );
     }
